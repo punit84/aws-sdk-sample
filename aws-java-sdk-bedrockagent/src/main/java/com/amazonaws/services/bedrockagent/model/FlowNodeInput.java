@@ -1,0 +1,279 @@
+/*
+ * Copyright 2019-2024 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
+ * the License. A copy of the License is located at
+ * 
+ * http://aws.amazon.com/apache2.0
+ * 
+ * or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
+ * and limitations under the License.
+ */
+package com.amazonaws.services.bedrockagent.model;
+
+import java.io.Serializable;
+import javax.annotation.Generated;
+import com.amazonaws.protocol.StructuredPojo;
+import com.amazonaws.protocol.ProtocolMarshaller;
+
+/**
+ * <p>
+ * Contains configurations for an input to a node.
+ * </p>
+ * 
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/bedrock-agent-2023-06-05/FlowNodeInput" target="_top">AWS API
+ *      Documentation</a>
+ */
+@Generated("com.amazonaws:aws-java-sdk-code-generator")
+public class FlowNodeInput implements Serializable, Cloneable, StructuredPojo {
+
+    /**
+     * <p>
+     * An expression that formats the input for the node. For an explanation of how to create expressions, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-expressions.html">Expressions in Prompt flows in
+     * Amazon Bedrock</a>.
+     * </p>
+     */
+    private String expression;
+    /**
+     * <p>
+     * A name for the input that you can reference.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * The data type of the input. If the input doesn't match this type at runtime, a validation error will be thrown.
+     * </p>
+     */
+    private String type;
+
+    /**
+     * <p>
+     * An expression that formats the input for the node. For an explanation of how to create expressions, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-expressions.html">Expressions in Prompt flows in
+     * Amazon Bedrock</a>.
+     * </p>
+     * 
+     * @param expression
+     *        An expression that formats the input for the node. For an explanation of how to create expressions, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-expressions.html">Expressions in Prompt
+     *        flows in Amazon Bedrock</a>.
+     */
+
+    public void setExpression(String expression) {
+        this.expression = expression;
+    }
+
+    /**
+     * <p>
+     * An expression that formats the input for the node. For an explanation of how to create expressions, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-expressions.html">Expressions in Prompt flows in
+     * Amazon Bedrock</a>.
+     * </p>
+     * 
+     * @return An expression that formats the input for the node. For an explanation of how to create expressions, see
+     *         <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-expressions.html">Expressions in
+     *         Prompt flows in Amazon Bedrock</a>.
+     */
+
+    public String getExpression() {
+        return this.expression;
+    }
+
+    /**
+     * <p>
+     * An expression that formats the input for the node. For an explanation of how to create expressions, see <a
+     * href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-expressions.html">Expressions in Prompt flows in
+     * Amazon Bedrock</a>.
+     * </p>
+     * 
+     * @param expression
+     *        An expression that formats the input for the node. For an explanation of how to create expressions, see <a
+     *        href="https://docs.aws.amazon.com/bedrock/latest/userguide/flows-expressions.html">Expressions in Prompt
+     *        flows in Amazon Bedrock</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FlowNodeInput withExpression(String expression) {
+        setExpression(expression);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A name for the input that you can reference.
+     * </p>
+     * 
+     * @param name
+     *        A name for the input that you can reference.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * A name for the input that you can reference.
+     * </p>
+     * 
+     * @return A name for the input that you can reference.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * A name for the input that you can reference.
+     * </p>
+     * 
+     * @param name
+     *        A name for the input that you can reference.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FlowNodeInput withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The data type of the input. If the input doesn't match this type at runtime, a validation error will be thrown.
+     * </p>
+     * 
+     * @param type
+     *        The data type of the input. If the input doesn't match this type at runtime, a validation error will be
+     *        thrown.
+     * @see FlowNodeIODataType
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * The data type of the input. If the input doesn't match this type at runtime, a validation error will be thrown.
+     * </p>
+     * 
+     * @return The data type of the input. If the input doesn't match this type at runtime, a validation error will be
+     *         thrown.
+     * @see FlowNodeIODataType
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * The data type of the input. If the input doesn't match this type at runtime, a validation error will be thrown.
+     * </p>
+     * 
+     * @param type
+     *        The data type of the input. If the input doesn't match this type at runtime, a validation error will be
+     *        thrown.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FlowNodeIODataType
+     */
+
+    public FlowNodeInput withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The data type of the input. If the input doesn't match this type at runtime, a validation error will be thrown.
+     * </p>
+     * 
+     * @param type
+     *        The data type of the input. If the input doesn't match this type at runtime, a validation error will be
+     *        thrown.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FlowNodeIODataType
+     */
+
+    public FlowNodeInput withType(FlowNodeIODataType type) {
+        this.type = type.toString();
+        return this;
+    }
+
+    /**
+     * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
+     * redacted from this string using a placeholder value.
+     *
+     * @return A string representation of this object.
+     *
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+        if (getExpression() != null)
+            sb.append("Expression: ").append("***Sensitive Data Redacted***").append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
+        sb.append("}");
+        return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+
+        if (obj instanceof FlowNodeInput == false)
+            return false;
+        FlowNodeInput other = (FlowNodeInput) obj;
+        if (other.getExpression() == null ^ this.getExpression() == null)
+            return false;
+        if (other.getExpression() != null && other.getExpression().equals(this.getExpression()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int hashCode = 1;
+
+        hashCode = prime * hashCode + ((getExpression() == null) ? 0 : getExpression().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        return hashCode;
+    }
+
+    @Override
+    public FlowNodeInput clone() {
+        try {
+            return (FlowNodeInput) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new IllegalStateException("Got a CloneNotSupportedException from Object.clone() " + "even though we're Cloneable!", e);
+        }
+    }
+
+    @com.amazonaws.annotation.SdkInternalApi
+    @Override
+    public void marshall(ProtocolMarshaller protocolMarshaller) {
+        com.amazonaws.services.bedrockagent.model.transform.FlowNodeInputMarshaller.getInstance().marshall(this, protocolMarshaller);
+    }
+}
